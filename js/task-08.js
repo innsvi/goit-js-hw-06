@@ -20,9 +20,14 @@ function onFormSubmit(event){
     } = event.currentTarget;
 
     if(email.value === '' || password.value === ''){
-        return alert('All fields should be filled out');
+        return alert('All fields should be filled out!');
     };
 
-    console.log(`Login: ${email.value}, Password: ${password.value}`);
+    const userDataForm = {
+        email: email.value,
+        password: password.value,
+    };
+
+    console.log(userDataForm);
     event.currentTarget.reset();
 }
